@@ -147,84 +147,84 @@ Placeholder
 
 ### A Comprehensive Template For Regression Problem
 1. **Data Preprocessing**
-• Remove any duplicate records.
-• Handle missing values using techniques such as imputation or deletion.
-• Handle any outliers by either removing them or replacing them with more appropriate values. 
-• Check for any data inconsistencies and correct them. 
-• Convert categorical variables into numerical values (if needed).
+* Remove any duplicate records.
+* Handle missing values using techniques such as imputation or deletion.
+* Handle any outliers by either removing them or replacing them with more appropriate values. 
+* Check for any data inconsistencies and correct them. 
+* Convert categorical variables into numerical values (if needed).
 
 2. **Exploratory Data Analysis (EDA)**
-• Visualize the data to identify any patterns or trends. 
-• Explore the distribution of the variables. 
-• Look for any correlations between variables 
-• Identify any outliers or anomalies. 
-• Consider exploring the data in more depth by examining the distribution of each variable, identifying any nonlinear relationships, and checking for any seasonal or time-series patterns.
+* Visualize the data to identify any patterns or trends. 
+* Explore the distribution of the variables. 
+* Look for any correlations between variables 
+* Identify any outliers or anomalies. 
+* Consider exploring the data in more depth by examining the distribution of each variable, identifying any nonlinear relationships, and checking for any seasonal or time-series patterns.
 
 3. **Feature Selection**
-• Identify the relevant features that contribute most to the outcome variable. 
-• Remove any irrelevant or redundant features that do not contribute significantly.
-• Use techniques such as feature importance, correlation matrix, or PCA.
-• Consider using wrapper methods, such as recursive feature elimination, which can perform a more exhaustive search for relevant features.
+* Identify the relevant features that contribute most to the outcome variable. 
+* Remove any irrelevant or redundant features that do not contribute significantly.
+* Use techniques such as feature importance, correlation matrix, or PCA.
+* Consider using wrapper methods, such as recursive feature elimination, which can perform a more exhaustive search for relevant features.
 
 4. **Feature Engineering**
-• Create new features that may be more informative or relevant.
-• Transform existing features to make them more suitable for modelling.
-• Use techniques such as one-hot encoding, binning, or scaling.
-• Consider using domain expertise to create features that may be more relevant and meaningful.
+* Create new features that may be more informative or relevant.
+* Transform existing features to make them more suitable for modelling.
+* Use techniques such as one-hot encoding, binning, or scaling.
+* Consider using domain expertise to create features that may be more relevant and meaningful.
 
 5. **Data Standardization**
-• Scale the numerical features to have a mean of 0 and a standard deviation of 1.
-• Helps the model to converge faster and improves the model's performance.
-• Consider using more advanced techniques such as min-max scaling or robust scaling to handle outliers or non-Gaussian distributions.
+* Scale the numerical features to have a mean of 0 and a standard deviation of 1.
+* Helps the model to converge faster and improves the model's performance.
+* Consider using more advanced techniques such as min-max scaling or robust scaling to handle outliers or non-Gaussian distributions.
 
 6. **Data Split**
-• Split the data into training, validation, and test sets.
-• Use a stratified sampling technique to ensure that each class is represented equally in each set.
+* Split the data into training, validation, and test sets.
+* Use a stratified sampling technique to ensure that each class is represented equally in each set.
 
 7. **Model Selection**
-• Choose a suitable regression algorithm (e.g., linear regression, polynomial regression, support vector regression, decision trees, random forests, or neural networks).
-• Consider using ensemble methods, such as random forests or gradient boosting, which can improve the model's performance by combining multiple weak learners.
+* Choose a suitable regression algorithm (e.g., linear regression, polynomial regression, support vector regression, decision trees, random forests, or neural networks).
+* Consider using ensemble methods, such as random forests or gradient boosting, which can improve the model's performance by combining multiple weak learners.
 
 8. **Model Training**
-• Train the model using the training set.
-• Tune the hyperparameters of the model using techniques such as grid search or random search.
+* Train the model using the training set.
+* Tune the hyperparameters of the model using techniques such as grid search or random search.
 
 9. **Model Validation**
-• Use the validation set to evaluate the performance of the model.
-• Use metrics such as mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), or R-squared (R2).
-• Consider using cross-validation, which can provide a more robust estimate of the model's performance by using multiple validation sets.
+* Use the validation set to evaluate the performance of the model.
+* Use metrics such as mean squared error (MSE), root mean squared error (RMSE), mean absolute error (MAE), or R-squared (R2).
+* Consider using cross-validation, which can provide a more robust estimate of the model's performance by using multiple validation sets.
 
 10. **Model Tuning**
-• After selecting the model, the next step is to fine-tune its hyperparameters. Hyperparameters are model settings that cannot be learned during training, and their values must be set by the data scientist. Hyperparameters can have a significant impact on the model's performance, and tuning them correctly can improve the model's accuracy. Techniques such as grid search or random search can be used to find the best combination of hyperparameters that maximize the performance of the model. • Consider using Bayesian optimization, which can perform a more efficient search for optimal hyperparameters compared to grid search or random search.
+* After selecting the model, the next step is to fine-tune its hyperparameters. Hyperparameters are model settings that cannot be learned during training, and their values must be set by the data scientist. Hyperparameters can have a significant impact on the model's performance, and tuning them correctly can improve the model's accuracy. Techniques such as grid search or random search can be used to find the best combination of hyperparameters that maximize the performance of the model. * Consider using Bayesian optimization, which can perform a more efficient search for optimal hyperparameters compared to grid search or random search.
 
 11. **Model Testing**
-• Once the model is trained and tuned, it is evaluated on the test set to measure its final performance. The test set should be kept completely separate from the training and validation sets to avoid overfitting. The model's performance on the test set provides an unbiased estimate of how well the model will perform on new data.
+* Once the model is trained and tuned, it is evaluated on the test set to measure its final performance. The test set should be kept completely separate from the training and validation sets to avoid overfitting. The model's performance on the test set provides an unbiased estimate of how well the model will perform on new data.
 
 12. **Interpretation**
-• Once the model is trained, and its performance has been evaluated, it's time to interpret the results. 
-• Identify which features have the most significant impact on the outcome variable. 
-• Use techniques such as feature importance, partial dependence plots, or permutation feature importance to interpret the model's behaviour. 
-• Consider using SHAP (SHapley Additive exPlanations), which provides a unified framework for interpreting the output of any machine learning model. SHAP values explain the output of any model by computing the contribution of each feature to the prediction. 
-• Visualize the results to communicate the findings effectively. Present the results in a way that is easily understandable to stakeholders and decision-makers.
+* Once the model is trained, and its performance has been evaluated, it's time to interpret the results. 
+* Identify which features have the most significant impact on the outcome variable. 
+* Use techniques such as feature importance, partial dependence plots, or permutation feature importance to interpret the model's behaviour. 
+* Consider using SHAP (SHapley Additive exPlanations), which provides a unified framework for interpreting the output of any machine learning model. SHAP values explain the output of any model by computing the contribution of each feature to the prediction. 
+* Visualize the results to communicate the findings effectively. Present the results in a way that is easily understandable to stakeholders and decision-makers.
 
 13. **Deployment** 
-• Once the model is developed and tested, the next step is to deploy it into production. 
-• Consider the infrastructure requirements for deploying the model, such as computing resources, storage, and network bandwidth. 
-• Ensure that the model's performance meets the business requirements and monitor its performance regularly. 
-• Develop a plan for maintaining and updating the model to ensure that it remains accurate and relevant over time.
-• Consider ethical and legal implications of deploying the model and ensure that it meets ethical and regulatory guidelines.
+* Once the model is developed and tested, the next step is to deploy it into production. 
+* Consider the infrastructure requirements for deploying the model, such as computing resources, storage, and network bandwidth. 
+* Ensure that the model's performance meets the business requirements and monitor its performance regularly. 
+* Develop a plan for maintaining and updating the model to ensure that it remains accurate and relevant over time.
+* Consider ethical and legal implications of deploying the model and ensure that it meets ethical and regulatory guidelines.
 
 14. **Monitoring**
-• Once the model is deployed, it is important to monitor its performance over time. 
-• Monitor the inputs and outputs to ensure that they are consistent with the training data. 
-• Check for any data drift or concept drift, which occurs when the statistical properties of the input data change over time, leading to a decrease in the model's performance. 
-• Use techniques such as statistical process control, anomaly detection, or change detection to identify any issues and take corrective actions.
+* Once the model is deployed, it is important to monitor its performance over time. 
+* Monitor the inputs and outputs to ensure that they are consistent with the training data. 
+* Check for any data drift or concept drift, which occurs when the statistical properties of the input data change over time, leading to a decrease in the model's performance. 
+* Use techniques such as statistical process control, anomaly detection, or change detection to identify any issues and take corrective actions.
 
 15. **Maintenance**
-• Maintain the model by periodically retraining it on new data or updating it with new features or hyperparameters.
-• Consider the ongoing costs and benefits of maintaining the model compared to redeveloping it from scratch.
-• Ensure that the model is still aligned with the business objectives and that the assumptions made during the development process are still valid.
-• Document any changes or updates to the model and its associated processes and workflows.
+* Maintain the model by periodically retraining it on new data or updating it with new features or hyperparameters.
+* Consider the ongoing costs and benefits of maintaining the model compared to redeveloping it from scratch.
+* Ensure that the model is still aligned with the business objectives and that the assumptions made during the development process are still valid.
+* Document any changes or updates to the model and its associated processes and workflows.
 
 
 ## Unsupervised Learning
