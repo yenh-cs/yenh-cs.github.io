@@ -11,7 +11,7 @@ Thank you for joining me on this journey to demystify data science and make it m
 
 # Mathematics for ML
 ## Statistics 101
-### Measures of Central Tendency and Data Dispersion
+#### Measures of Central Tendency and Data Dispersion
 The first stage of any machine learning project is to explore the data, and a crucial part of that exploration is understanding the measures of central tendency and dispersion. 
 
 It's always a good idea to summarize the data by means of graphs:
@@ -67,7 +67,7 @@ Placeholder
 
 # Machine Learning
 ## Supervised Learning
-### A Comprehensive Template For Classification Problem
+#### A Comprehensive Template For Classification Problem
 1. **Data Preprocessing**
 * Remove any duplicate records.
 * Handle missing values using techniques such as imputation or deletion. 
@@ -145,7 +145,7 @@ Placeholder
 * Consider using automated pipelines to handle data updates and model retraining, which can save time and improve efficiency.
 
 
-### A Comprehensive Template For Regression Problem
+#### A Comprehensive Template For Regression Problem
 1. **Data Preprocessing**
 * Remove any duplicate records.
 * Handle missing values using techniques such as imputation or deletion.
@@ -244,17 +244,17 @@ Placeholder
 
 # Software Engineering
 ## Algorithms
-### Advent Of Code 2021
+#### Advent Of Code 2021
 https://github.com/yenh-cs/adventofcode2021.git
 
-### Advent Of Code 2022
+#### Advent Of Code 2022
 https://github.com/yenh-cs/adventofcode2022.git
 
-### Leetcode
+#### Leetcode
 https://github.com/yenh-cs/algorithm.git 
 
 ## Python
-### 100 Days of Python
+#### 100 Days of Python
 https://github.com/yenh-cs/100DaysPython.git
 
 
