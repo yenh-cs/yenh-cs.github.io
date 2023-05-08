@@ -233,6 +233,8 @@ Placeholder
 ## Data Visualization
 Placeholder
 
+## Story Telling With Data
+Placeholder
 
 ## Machine Learning For Production
 Placeholder
