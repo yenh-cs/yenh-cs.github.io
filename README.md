@@ -8,10 +8,10 @@ That's where this blog comes in. My goal is to break down the concepts and tools
 
 Thank you for joining me on this journey to demystify data science and make it more accessible to everyone.
 
-
+&nbsp;&nbsp;&nbsp;
 # Mathematics for ML
 ## Statistics 101
-#### Measures of Central Tendency and Data Dispersion
+#### **Measures of Central Tendency and Data Dispersion**
 The first stage of any machine learning project is to explore the data, and a crucial part of that exploration is understanding the measures of central tendency and dispersion. 
 
 It's always a good idea to summarize the data by means of graphs:
@@ -57,17 +57,87 @@ One useful tool in a data scientist's tool box is **Box plots** which are an ess
 
 It should pay attention that the the area below the median is greater than the area above the median line in a box plot. It means that the lower half of the data set is more spread out than the upper half of the data set. This can happen when the distribution of the data is skewed, with a longer tail on one side of the median than the other. The box plot shows the quartiles of the data, which are based on the median, so if the data is skewed, the lower quartile (Q1) and upper quartile (Q3) may be closer together on one side of the median than the other. This can result in a longer box on one side of the median and a shorter box on the other side, with more outliers on the longer side. In general, if the area below the median is much greater than the area above the median line in a box plot, it suggests that there is more variability in the lower half of the data set than in the upper half. However, the exact interpretation depends on the shape of the distribution and the nature of the data being analyzed.
 
-
+&nbsp;&nbsp;
 ## Linear Algebra
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Multivariate Calculus
 Placeholder
 
 
+&nbsp;&nbsp;&nbsp;
 # Machine Learning
+## Data Mining
+#### **Cross Industry Standard Process for Data Mining (CRISP-DM)** - Genralist friendly version
+![This is the Cross Industry Standard Process for Data Mining diagram.](/assets/images/CRISP-DM.png "This is the Cross Industry Standard Process for Data Mining diagram.")
+
+Data mining is an intricate process that combines science, technology, and art to solve complex problems. This process follows a structured approach to ensure consistency, repeatability, and objectivity. It involves several stages that are iterative, meaning that they may need to be repeated until the problem is solved.
+
+The first stage is **business understanding**, where analysts need to understand the problem that needs to be solved. This stage requires creativity as the business problem needs to be cast as one or more data science problems. Data scientists need to have high-level knowledge to see novel formulations.
+
+The next stage is **data understanding**, where analysts need to understand the available raw material or data to build a solution. Data may have strengths and limitations, and it's essential to estimate the costs and benefits of each data source. Data collation may also require additional effort.
+
+**Data preparation** is another crucial stage where data are manipulated and converted into forms that yield better results. Data mining techniques have certain requirements that may require data to be in a different form than how it is naturally provided. For example, converting data to tabular format, removing or inferring missing values, and converting data to different types. During data preparation, it's essential to beware of "leaks" that may give information on the target variable that's not actually available when the decision needs to be made.
+
+The **modeling** stage is where data mining techniques are applied to the data to capture regularities in the data and develop models based on algorithms such as decision trees, neural networks, or association rules. Different algorithms may be better suited for different types of data and applications.
+
+The **evaluation** stage is crucial to assess data mining results rigorously and gain confidence that they are valid and reliable. Models need to be tested in a controlled laboratory setting before deployment. Various stakeholders have interests in the business decision-making that will be accomplished or supported by the resultant models, and they need to sign off on the deployment of the models.
+
+The **deployment** stage refers to integrating a model or solution into a production environment. One important consideration is that the environment it will operate in may be different from the environment it was developed in, leading to discrepancies in performance. Ongoing monitoring and maintenance are also necessary to ensure continued accuracy, as models can suffer from drift as data patterns change over time. It's crucial to evaluate the ethical implications of deploying a model or solution carefully.
+
+For example, suppose a model is trained on data collected from a specific region to predict the likelihood of loan defaults. In that case, it may not perform as well when deployed in a different region due to variations in demographics and economic conditions. Also, suppose the model is used to make loan approval decisions, and it's found to be biased against a particular race or gender. In that case, it's important to evaluate the potential impact of the model before deploying it in a production environment. The model's behavior needs to be made comprehensible to stakeholders, and the ethical implications of its deployment should be carefully considered.
+
+
+&nbsp;
+#### **Cross Industry Standard Process for Data Mining (CRISP-DM)** - Detailed version
+![This is the Cross Industry Standard Process for Data Mining diagram.](/assets/images/CRISP-DM.png "This is the Cross Industry Standard Process for Data Mining diagram.")
+
+Data mining is a complex process that involves the application of science, technology, and art. There is a well-understood process that places a structure on the problem, allowing for consistency, repeatability, and objectiveness. The process diagram shows that iteration is the rule rather than the exception, as going through the process once without solving the problem is generally not a failure. The steps involved in data mining are discussed below:
+
+
+**Business Understanding**
+The first step in data mining is to understand the problem that needs to be solved. Often, business projects are not clear and unambiguous data mining problems, so recasting the problem and designing a solution is an iterative process of discovery. The business understanding stage involves creativity from the analysts, as they need to cast the business problem as one or more data science problems. High-level knowledge of the fundamentals helps creative business analysts see novel formulations.
+
+
+**Data Understanding**
+The data comprise the available raw material from which the solution will be built. It is important to understand the strengths and limitations of the data because rarely is there an exact match with the problem. The costs of data can vary, and a critical part of the data understanding phase is estimating the costs and benefits of each data source and deciding whether further investment is merited. Even after all datasets are acquired, collating them may require additional effort.
+
+
+**Data Preparation**
+Data preparation is a crucial stage of the data mining process where data are manipulated and converted into forms that yield better results. Data mining techniques impose certain requirements on the data they use, and often require data to be in a form different from how the data are provided naturally. Typical examples of data preparation include converting data to tabular format, removing or inferring missing values, and converting data to different types.
+
+Some data mining techniques are designed for symbolic and categorical data, while others handle only numeric values. In addition, numerical values must often be normalized or scaled so that they are comparable. Standard techniques and rules of thumb are available for doing such conversions.
+
+One very general and important concern during data preparation is to beware of "leaks." A leak is a situation where a variable collected in historical data gives information on the target variable, information that appears in historical data but is not actually available when the decision has to be made. Leakage must be considered carefully during data preparation because it typically is performed after the fact—from historical data.
+
+
+**Modeling**
+The modeling stage is the primary place where data mining techniques are applied to the data. It is important to have some understanding of the fundamental ideas of data mining, including the sorts of techniques and algorithms that exist, because this is the part of the craft where the most science and technology can be brought to bear.
+
+The output of modeling is some sort of model or pattern capturing regularities in the data. Models can be based on many types of algorithms, such as decision trees, neural networks, or association rules. Each algorithm has strengths and weaknesses, and different algorithms may be better suited for different types of data and applications.
+
+
+**Evaluation**
+The purpose of the evaluation stage is to assess the data mining results rigorously and to gain confidence that they are valid and reliable before moving on. It is possible to deploy results immediately after data mining, but this is inadvisable; it is usually far easier, cheaper, quicker, and safer to test a model first in a controlled laboratory setting.
+
+The evaluation stage also serves to help ensure that the model satisfies the original business goals. Usually, a data mining solution is only a piece of the larger solution, and it needs to be evaluated as such. Evaluating the results of data mining includes both quantitative and qualitative assessments. Various stakeholders have interests in the business decision-making that will be accomplished or supported by the resultant models.
+
+In many cases, these stakeholders need to "sign off" on the deployment of the models and need to be satisfied by the quality of the model's decisions. To facilitate such qualitative assessment, the data scientist must think about the comprehensibility of the model to stakeholders (not just to the data scientists). If the model itself is not comprehensible (e.g., maybe the model is a very complex mathematical formula), the data scientists need to work to make the behavior of the model comprehensible.
+
+
+**Deployment**
+Deployment refers to the process of integrating a model or solution into a production environment. This can involve putting a predictive model into operation within an information system, or deploying a data-driven decision making process into a business operation.
+
+One important consideration in deploying a model is that the environment it will operate in may be different from the environment it was developed in. This can lead to discrepancies in performance, and the need for recalibration or adjustment of the model. For example, a model trained on data collected from a specific region may not perform as well when deployed in a different region. Another important aspect of deployment is ongoing monitoring and maintenance. Models can suffer from "drift" as data patterns change over time, and periodic recalibration or retraining may be necessary to ensure continued accuracy.
+
+Finally, it is important to consider the ethical implications of deploying a model or solution. Data-driven decision making can have unintended consequences, and it is important to carefully evaluate the potential impact of a model before deploying it in a production environment.
+
+
+&nbsp;&nbsp;
 ## Supervised Learning
-#### A Comprehensive Template For Classification Problem
+#### **A Comprehensive Template For Classification Problem**
 1. **Data Preprocessing**
 * Remove any duplicate records.
 * Handle missing values using techniques such as imputation or deletion. 
@@ -145,7 +215,8 @@ Placeholder
 * Consider using automated pipelines to handle data updates and model retraining, which can save time and improve efficiency.
 
 
-#### A Comprehensive Template For Regression Problem
+&nbsp;
+#### **A Comprehensive Template For Regression Problem**
 1. **Data Preprocessing**
 * Remove any duplicate records.
 * Handle missing values using techniques such as imputation or deletion.
@@ -227,41 +298,59 @@ Placeholder
 * Document any changes or updates to the model and its associated processes and workflows.
 
 
+&nbsp;&nbsp;
 ## Unsupervised Learning
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Data Visualization
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Story Telling With Data
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Machine Learning For Production
 Placeholder
 
 
+&nbsp;&nbsp;&nbsp;
 # Deep Learning
 ## Neural Networks
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Convolutional Neural Networks
 Placeholder
 
+
+&nbsp;&nbsp;
 ## Keras and TensorFlow
 Placeholder
 
 
+
+&nbsp;&nbsp;&nbsp;
 # Software Engineering
 ## Algorithms
 #### Advent Of Code 2021
 https://github.com/yenh-cs/adventofcode2021.git
 
+&nbsp;
 #### Advent Of Code 2022
 https://github.com/yenh-cs/adventofcode2022.git
 
+&nbsp;
 #### Leetcode
 https://github.com/yenh-cs/algorithm.git 
 
+
+&nbsp;&nbsp;
 ## Python
 #### 100 Days of Python
 https://github.com/yenh-cs/100DaysPython.git
