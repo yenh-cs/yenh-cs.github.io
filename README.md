@@ -14,7 +14,7 @@ Thank you for joining me on this journey to demystify data science and make it m
 #### **Measures of Central Tendency and Data Dispersion**
 The first stage of any machine learning project is to explore the data, and a crucial part of that exploration is understanding the measures of central tendency and dispersion. 
 
-It's always a good idea to summarize the data by means of graphs:
+It's always a good idea to summarize the data by means of graphs.
 * For *nominal/ordinal* data, i.e. colors of the rainbow, types of animals, and political affiliations or grades in school (A, B, C, D, F), customer satisfaction ratings (very satisfied, satisfied, neutral, dissatisfied, very dissatisfied), and clothing sizes (small, medium, large) -> bar graph.
 * For *interval ratio varibale* (numeric data such house price) -> histogram.
 
@@ -56,6 +56,62 @@ One useful tool in a data scientist's tool box is **Box plots** which are an ess
 ![This is a box plot.](/assets/images/boxplot.png "This is a box plot.")
 
 It should pay attention that the the area below the median is greater than the area above the median line in a box plot. It means that the lower half of the data set is more spread out than the upper half of the data set. This can happen when the distribution of the data is skewed, with a longer tail on one side of the median than the other. The box plot shows the quartiles of the data, which are based on the median, so if the data is skewed, the lower quartile (Q1) and upper quartile (Q3) may be closer together on one side of the median than the other. This can result in a longer box on one side of the median and a shorter box on the other side, with more outliers on the longer side. In general, if the area below the median is much greater than the area above the median line in a box plot, it suggests that there is more variability in the lower half of the data set than in the upper half. However, the exact interpretation depends on the shape of the distribution and the nature of the data being analyzed.
+
+
+&nbsp;
+#### **Statistical Power**
+Statistical power refers to the probability of correctly rejecting a null hypothesis when it is false. In other words, it measures the ability of a statistical test to detect an effect or relationship if it truly exists in the population being studied.
+
+A high statistical power indicates a greater likelihood of finding a significant result if the effect or relationship being tested actually exists. Conversely, a low statistical power means there is a higher chance of failing to detect a true effect, leading to a false negative result (Type II error).
+
+Statistical power is influenced by several factors, including the sample size, the magnitude of the effect being studied, the chosen significance level (typically denoted as alpha), and the variability in the data. Increasing the sample size and effect size, as well as reducing variability, generally increase statistical power.
+
+Researchers often aim for a sufficiently high statistical power (e.g., typically 80% or higher) to ensure that their study has a good chance of detecting meaningful effects. Adequate statistical power is crucial for drawing reliable conclusions and avoiding false interpretations of the data.
+
+
+&nbsp;
+#### **The Perils of Multiple Comparison and P-hacking: Unveiling the Pitfalls of Data Analysis**
+Data analysis plays a crucial role in scientific research and decision-making processes. However, there are certain pitfalls that researchers and analysts must be aware of to ensure the integrity and reliability of their findings. Two key challenges in data analysis are multiple comparison and p-hacking. In this article, we will explore these concepts, understand their implications, and provide detailed examples to illustrate their perils.
+
+**Multiple Comparison**
+Multiple comparison refers to the practice of conducting multiple statistical tests or hypothesis tests simultaneously without appropriate adjustments. When multiple tests are performed on the same dataset or multiple variables are examined, the likelihood of obtaining false positive results increases. This is because random chance alone can lead to the appearance of significant findings, even if there is no true effect or relationship in the population.
+
+Example: Imagine a medical study investigating the effects of a new drug on various health outcomes. Researchers decide to compare the drug's impact on blood pressure, cholesterol levels, and glucose levels. If each outcome is analyzed independently without adjusting for multiple comparisons, there is a higher chance of observing significant results purely due to chance, leading to potential false conclusions.
+
+**P-hacking**
+P-hacking, also known as data dredging or fishing, involves manipulating data or analysis procedures to obtain statistically significant results. It refers to the selective reporting or analysis of data in order to achieve desired outcomes or significant p-values. This practice is highly problematic because it can introduce bias, mislead interpretations, and undermine the credibility of research findings.
+
+Example: Suppose a social scientist is examining the relationship between social media usage and self-esteem. Initially, the researcher measures self-esteem in various ways and tests multiple statistical models. After several unsuccessful attempts to find a significant relationship, they finally discover a small but statistically significant correlation between self-esteem and the number of followers on a specific social media platform. However, this result was obtained after trying various combinations and selectively reporting the analysis that yielded a significant finding, thus introducing a bias in the reported results.
+
+Both multiple comparison and p-hacking can have severe consequences. They can lead to spurious or false-positive findings, misinterpretations, and misguided decision-making. Moreover, they erode the trust in scientific research and can have far-reaching implications in fields such as medicine, economics, and social sciences.
+
+**Mitigating the Pitfalls**
+To mitigate the perils of multiple comparison and p-hacking, it is important to adopt responsible and rigorous practices in data analysis. Here are some key recommendations:
+
+1. *Pre-registration*: Clearly define hypotheses and analysis plans in advance, reducing the temptation to selectively report findings post-analysis.
+
+1. *Adjusting for Multiple Comparisons*: Utilize appropriate statistical techniques, such as Bonferroni correction, false discovery rate (FDR), or the family-wise error rate (FWER) adjustment, to account for the increased probability of false positives when conducting multiple tests.
+
+1. *Transparency and Reproducibility*: Share data, analysis scripts, and methodologies to allow for scrutiny and replication by others, promoting transparency and reducing the potential for p-hacking.
+
+1. *Independent Validation*: Encourage independent replication of findings to validate and reinforce the robustness of research outcomes.
+
+Multiple comparison and p-hacking pose significant challenges to the integrity and credibility of data analysis. Researchers, analysts, and decision-makers must be aware of these pitfalls and adopt responsible practices to ensure rigorous and reliable results. By adhering to proper statistical methods, transparency, and robust scientific practices, we can enhance the validity of research findings, foster trust in data-driven decisions, and advance our understanding of the world around us.
+
+
+&nbsp;
+#### **Simpson's Paradox**
+Simpson's Paradox is a statistical phenomenon where the relationship between two variables reverses or changes direction when a third variable is taken into account. It can lead to misleading or contradictory conclusions if the underlying confounding factor is not properly considered. Here are a few real-life examples to illustrate the concept:
+
+1. Example 1: University Admissions Suppose a university is evaluating admission rates for different departments. When looking at each department individually, it appears that men have higher admission rates than women. However, when considering the overall data for the university as a whole, it is found that women have a higher admission rate. This paradox can occur if there are more women applying to departments with higher admission rates, while men tend to apply to departments with lower admission rates. The gender distribution across departments acts as a confounding factor, leading to the reversal of the relationship.
+
+1. Example 2: Medical Treatment In a medical study comparing the effectiveness of two treatments, Treatment A and Treatment B, it is found that Treatment A has a higher success rate when analyzed separately for younger and older patients. However, when combining the data for all age groups, it is observed that Treatment B has a higher success rate overall. This paradox can arise if the distribution of age groups is not taken into account. For example, if Treatment A is more commonly administered to younger patients who generally have better outcomes, while Treatment B is used for older patients with more severe cases, the overall analysis may lead to a different conclusion.
+
+1. Example 3: Sports Performance In sports, an athlete's performance can be evaluated based on various factors, such as individual game statistics or overall season performance. Consider a baseball player who has a higher batting average in each game against left-handed pitchers and right-handed pitchers separately. However, when looking at the combined data, it is found that the player has a lower overall batting average. This paradox can occur if the player faces left-handed pitchers more frequently in games where the overall team's performance is weaker, while facing right-handed pitchers more often in games where the team performs better. The team's performance acts as a confounding factor, leading to the reversal of the relationship.
+
+These examples demonstrate how Simpson's Paradox can occur in real-life situations, where the interpretation of data can be misleading if the presence of confounding factors is not considered. It highlights the importance of thorough analysis and understanding the underlying factors to draw accurate conclusions from data.
+
+
 
 &nbsp;&nbsp;
 ## Linear Algebra
@@ -134,10 +190,63 @@ One important consideration in deploying a model is that the environment it will
 
 Finally, it is important to consider the ethical implications of deploying a model or solution. Data-driven decision making can have unintended consequences, and it is important to carefully evaluate the potential impact of a model before deploying it in a production environment.
 
+
 &nbsp;
 #### **Data Science Basic Concepts**
-**Bias-Variance Tradeoff**
+##### **Signal and Noise**
+Signal refers to the true underlying pattern or information in the data that we are interested in, while noise represents random variations or irrelevant factors that can obscure the signal. For instance, in analyzing stock market data, the signal may be the long-term trend indicating the overall performance, while the noise could be short-term fluctuations caused by random market events.
 
+
+&nbsp;
+##### **Overfitting**
+Overfitting is a phenomenon in machine learning and statistical modeling where a model becomes overly complex and excessively tailored to the training data, resulting in poor generalization to new, unseen data. It occurs when a model captures noise or random fluctuations in the training data, instead of learning the underlying true patterns.
+
+Here are some explained examples to help understand overfitting:
+
+**Polynomial Regression**: Suppose you have a dataset with a single input variable (e.g., housing prices) and a target variable (e.g., house size). If you fit a high-degree polynomial regression model to the data, it may perfectly fit all the training examples, including the noise or outliers. The model will have numerous oscillations and wiggles to accommodate each training point. However, when you use this overfitted model to predict house sizes for new data points, it will likely produce unreliable and inaccurate results because it has memorized the noise rather than capturing the underlying trend.
+
+**Decision Trees**: Decision trees are prone to overfitting when they become too deep and complex. Imagine you're building a decision tree to classify whether an email is spam or not based on various features. If the tree becomes too deep and branches too extensively, it can create specific rules for each training example, even those that are outliers or noise. Consequently, the tree may have high accuracy on the training set, but it will struggle to generalize well to new emails and may misclassify them.
+
+**Neural Networks**: Neural networks, particularly deep networks with a large number of layers and parameters, are susceptible to overfitting. If you have a complex neural network architecture and insufficient training data, the model may effectively memorize the training examples, including the noise, rather than learning meaningful patterns. As a result, the network will struggle to make accurate predictions on unseen data.
+
+**Image Classification**: In the context of image classification, overfitting can occur when a model is trained on a limited number of images. If the model becomes too complex, it may start memorizing specific details, textures, or backgrounds of the training images, rather than learning generalizable features. Consequently, it will struggle to classify new images correctly, especially those with variations in lighting, angles, or backgrounds.
+
+To mitigate overfitting, various techniques can be employed, such as:
+
+1. *Regularization*: Adding regularization terms to the model's loss function, like L1 or L2 regularization, penalizes overly complex models and encourages simplicity.
+1. *Cross-validation*: Splitting the data into multiple subsets for training and validation helps assess the model's performance on unseen data and identify signs of overfitting.
+1. *Early stopping*: Monitoring the model's performance during training and stopping the training process when the validation error starts increasing can prevent overfitting.
+1. *Data augmentation*: Increasing the size of the training dataset through techniques like image transformations or synthetic data generation can help the model generalize better.
+1. *Simplifying the model*: Using simpler models with fewer parameters or reducing the complexity of the model architecture can reduce the risk of overfitting.
+By employing these techniques, the aim is to find the right balance between model complexity and generalization, ensuring that the model performs well not only on the training data but also on unseen data.
+
+&nbsp;
+##### **Under fitting**
+Underfitting is the opposite of overfitting and occurs when a machine learning model or statistical model is too simple to capture the underlying patterns in the data. It arises when the model is unable to learn the complexities and nuances present in the data, resulting in poor performance on both the training data and new, unseen data.
+
+Here are some explained examples to illustrate underfitting:
+
+**Linear Regression**: Consider a scenario where you have a dataset with a single input variable and a target variable that doesn't have a linear relationship. If you fit a simple linear regression model to this data, it may have high bias and fail to capture the nonlinear relationship between the variables. The resulting line will be too rigid and unable to adequately represent the data points, leading to a poor fit.
+
+**Classification**: Let's say you have a binary classification problem with two classes that are not linearly separable. If you attempt to use a linear classifier, such as logistic regression, it may draw a straight line to separate the classes. However, this linear decision boundary will not be able to accurately classify the data, resulting in a high error rate.
+
+**Underfitting in Neural Networks**: In the context of neural networks, underfitting can occur when the network is not deep or wide enough to capture the complexity of the underlying data. If you have a complex problem, but use a shallow neural network with only a few layers and a limited number of neurons, it may struggle to learn the intricate patterns, leading to poor performance.
+
+**Image Recognition**: Suppose you are training a deep convolutional neural network (CNN) for image recognition tasks, but you provide the network with limited training data and a relatively simple architecture. The model may fail to capture the intricate features and details in the images, resulting in low accuracy and an inability to generalize well to new, unseen images.
+
+To mitigate underfitting, several approaches can be employed:
+
+1. *Increasing model complexity*: Using more complex models with greater capacity, such as deep neural networks or nonlinear models, can help capture the underlying patterns in the data.
+1. *Feature engineering*: Enhancing the dataset by incorporating additional relevant features or transforming the existing features can provide the model with more discriminatory information.
+1. *Collecting more data*: Gathering a larger and more diverse dataset can help the model learn the underlying patterns better and reduce the risk of underfitting.
+1. *Reducing regularization*: If the model is overly regularized, loosening the regularization constraints, such as decreasing the strength of regularization terms, can allow the model to learn more complex relationships in the data.
+1. *Hyperparameter tuning*: Adjusting the hyperparameters of the model, such as learning rate, number of hidden units, or depth of the network, can improve the model's capacity to capture the underlying patterns.
+The goal in mitigating underfitting is to find an appropriate level of model complexity that balances simplicity with the ability to capture the relevant patterns in the data, ultimately leading to better generalization performance.Underfitting is the opposite of overfitting and occurs when a machine learning model or statistical model is too simple to capture the underlying patterns in the data. It arises when the model is unable to learn the complexities and nuances present in the data, resulting in poor performance on both the training data and new, unseen data.
+
+
+
+&nbsp;
+##### **Bias-Variance Tradeoff**
 The bias-variance tradeoff is a fundamental concept in machine learning that helps us understand the relationship between the complexity of a model and its ability to generalize well to unseen data. Let's break it down with a simple example.
 
 Imagine we're training a model to predict house prices based on their size (in square meter). We have a dataset of houses with their corresponding sizes and prices. Now, we want to build a regression model to predict the price of a new house given its size.
