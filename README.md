@@ -193,12 +193,12 @@ Finally, it is important to consider the ethical implications of deploying a mod
 
 &nbsp;
 #### **Data Science Basic Concepts**
-##### **Signal and Noise**
+**Signal and Noise**
 Signal refers to the true underlying pattern or information in the data that we are interested in, while noise represents random variations or irrelevant factors that can obscure the signal. For instance, in analyzing stock market data, the signal may be the long-term trend indicating the overall performance, while the noise could be short-term fluctuations caused by random market events.
 
 
 &nbsp;
-##### **Overfitting**
+**Overfitting**
 Overfitting is a phenomenon in machine learning and statistical modeling where a model becomes overly complex and excessively tailored to the training data, resulting in poor generalization to new, unseen data. It occurs when a model captures noise or random fluctuations in the training data, instead of learning the underlying true patterns.
 
 Here are some explained examples to help understand overfitting:
@@ -221,7 +221,7 @@ To mitigate overfitting, various techniques can be employed, such as:
 By employing these techniques, the aim is to find the right balance between model complexity and generalization, ensuring that the model performs well not only on the training data but also on unseen data.
 
 &nbsp;
-##### **Under fitting**
+**Underfitting**
 Underfitting is the opposite of overfitting and occurs when a machine learning model or statistical model is too simple to capture the underlying patterns in the data. It arises when the model is unable to learn the complexities and nuances present in the data, resulting in poor performance on both the training data and new, unseen data.
 
 Here are some explained examples to illustrate underfitting:
@@ -246,7 +246,7 @@ The goal in mitigating underfitting is to find an appropriate level of model com
 
 
 &nbsp;
-##### **Bias-Variance Tradeoff**
+**Bias-Variance Tradeoff**
 The bias-variance tradeoff is a fundamental concept in machine learning that helps us understand the relationship between the complexity of a model and its ability to generalize well to unseen data. Let's break it down with a simple example.
 
 Imagine we're training a model to predict house prices based on their size (in square meter). We have a dataset of houses with their corresponding sizes and prices. Now, we want to build a regression model to predict the price of a new house given its size.
