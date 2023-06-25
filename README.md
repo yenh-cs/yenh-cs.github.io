@@ -51,14 +51,23 @@ Variance = (1/n) * Σ(xi - x̄)^2, where n is the number of observations, Σ is 
 Standard Deviation = sqrt(1/n * Σ(xi - x̄)^2), where sqrt denotes the square root and all the other symbols are the same as in the variance formula.
 ```
 
-One useful tool in a data scientist's tool box is **Box plots** which are an essential tool for visualizing the measures of central tendency and dispersion. They offer a simple way to compare multiple datasets and identify differences between them, making it easy to spot outliers. By analyzing the quartiles of data based on the median, box plots can provide insights into the data's characteristics and identify potential problems. For example, suppose we are analyzing the performance of two different machine learning models. We can use a box plot to compare the accuracy scores of the two models. If the box plot shows that the median score of the first model is higher than the second model, we can conclude that the first model performs better. If the box plot shows that the second model has a wider range, we can investigate further to identify any outliers or potential issues with the data.
+One useful tool in a data scientist's toolbox is **Box plots** which are an essential tool for visualizing the measures of central tendency and dispersion. They offer a simple way to compare multiple datasets and identify differences between them, making it easy to spot outliers. By analyzing the quartiles of data based on the median, box plots can provide insights into the data's characteristics and identify potential problems. For example, suppose we are analyzing the performance of two different machine learning models. We can use a box plot to compare the accuracy scores of the two models. If the box plot shows that the median score of the first model is higher than the second model, we can conclude that the first model performs better. If the box plot shows that the second model has a wider range, we can investigate further to identify any outliers or potential issues with the data.
 
 ![This is a box plot.](/assets/images/boxplot.png "This is a box plot.")
 
-It should pay attention that the the area below the median is greater than the area above the median line in a box plot. It means that the lower half of the data set is more spread out than the upper half of the data set. This can happen when the distribution of the data is skewed, with a longer tail on one side of the median than the other. The box plot shows the quartiles of the data, which are based on the median, so if the data is skewed, the lower quartile (Q1) and upper quartile (Q3) may be closer together on one side of the median than the other. This can result in a longer box on one side of the median and a shorter box on the other side, with more outliers on the longer side. In general, if the area below the median is much greater than the area above the median line in a box plot, it suggests that there is more variability in the lower half of the data set than in the upper half. However, the exact interpretation depends on the shape of the distribution and the nature of the data being analyzed.
-
+It should pay attention that the area below the median is greater than the area above the median line in a box plot. It means that the lower half of the data set is more spread out than the upper half of the data set. This can happen when the distribution of the data is skewed, with a longer tail on one side of the median than the other. The box plot shows the quartiles of the data, which are based on the median, so if the data is skewed, the lower quartile (Q1) and upper quartile (Q3) may be closer together on one side of the median than the other. This can result in a longer box on one side of the median and a shorter box on the other side, with more outliers on the longer side. In general, if the area below the median is much greater than the area above the median line in a box plot, it suggests that there is more variability in the lower half of the data set than in the upper half. However, the exact interpretation depends on the shape of the distribution and the nature of the data being analyzed.
 
 &nbsp;
+_________________
+&nbsp;
+
+#### **Multi-stage Cluster Sample vs Stratified Random Sample**
+* **A multi-stage cluster** sample is a sampling technique used when the population is large and geographically dispersed. The population is divided into clusters, such as regions or cities, and a subset of clusters is randomly selected. Then, within the selected clusters, a further subset of units, such as households or individuals, is randomly chosen for data collection. This sampling method involves multiple stages of sampling, where clusters are selected first and then units within the clusters. Suppose a researcher wants to study the dietary habits of people in a large country. Instead of trying to survey the entire population, the researcher opts for a multi-stage cluster sample. First, the country is divided into clusters based on administrative regions (e.g., states or provinces). Then, a random sample of clusters is selected, such as 10 states. Next, within each selected state, a further random sample of cities or towns is chosen. Finally, within the selected cities or towns, households or individuals are randomly selected for data collection. This multi-stage approach allows the researcher to obtain a representative sample from different regions of the country efficiently.
+
+&nbsp;
+_________________
+&nbsp;
+
 #### **Statistical Power**
 Statistical power refers to the probability of correctly rejecting a null hypothesis when it is false. In other words, it measures the ability of a statistical test to detect an effect or relationship if it truly exists in the population being studied.
 
@@ -68,25 +77,23 @@ Statistical power is influenced by several factors, including the sample size, t
 
 Researchers often aim for a sufficiently high statistical power (e.g., typically 80% or higher) to ensure that their study has a good chance of detecting meaningful effects. Adequate statistical power is crucial for drawing reliable conclusions and avoiding false interpretations of the data.
 
-
 &nbsp;
+_________________
+&nbsp;
+
 #### **The Perils of Multiple Comparison and P-hacking: Unveiling the Pitfalls of Data Analysis**
-Data analysis plays a crucial role in scientific research and decision-making processes. However, there are certain pitfalls that researchers and analysts must be aware of to ensure the integrity and reliability of their findings. Two key challenges in data analysis are multiple comparison and p-hacking. In this article, we will explore these concepts, understand their implications, and provide detailed examples to illustrate their perils.
+Data analysis plays a crucial role in scientific research and decision-making processes. However, there are certain pitfalls that researchers and analysts must be aware of to ensure the integrity and reliability of their findings. Two key challenges in data analysis are multiple comparisons and p-hacking. In this article, we will explore these concepts, understand their implications, and provide detailed examples to illustrate their perils.
 
-**Multiple comparison** refers to the practice of conducting multiple statistical tests or hypothesis tests simultaneously without appropriate adjustments. When multiple tests are performed on the same dataset or multiple variables are examined, the likelihood of obtaining false positive results increases. This is because random chance alone can lead to the appearance of significant findings, even if there is no true effect or relationship in the population.
+  **Multiple comparison** refers to the practice of conducting multiple statistical tests or hypothesis tests simultaneously without appropriate adjustments. When multiple tests are performed on the same dataset or multiple variables are examined, the likelihood of obtaining false positive results increases. This is because random chance alone can   lead to the appearance of significant findings, even if there is no true effect or relationship in the population. Imagine a medical study investigating the effects of a new drug on various health outcomes. Researchers decided to compare the drug's impact on blood pressure, cholesterol levels, and glucose levels. If each outcome is analyzed independently without adjusting for multiple comparisons, there is a higher chance of observing significant results purely due to chance, leading to potential false conclusions.
 
-Example: Imagine a medical study investigating the effects of a new drug on various health outcomes. Researchers decide to compare the drug's impact on blood pressure, cholesterol levels, and glucose levels. If each outcome is analyzed independently without adjusting for multiple comparisons, there is a higher chance of observing significant results purely due to chance, leading to potential false conclusions.
+  **P-hacking**, also known as data dredging or fishing, involves manipulating data or analysis procedures to obtain statistically significant results. It refers to the selective reporting or analysis of data in order to achieve desired outcomes or significant p-values. This practice is highly problematic because it can introduce bias, mislead interpretations, and undermine the credibility of research findings. Suppose a social scientist is examining the relationship between social media usage and self-esteem. Initially, the researcher measures self-esteem in various ways and tests multiple statistical models. After several unsuccessful attempts to find a significant relationship, they finally discover a small but statistically significant correlation between self-esteem and the number of followers on a specific social media platform. However, this result was obtained after trying various combinations and selectively reporting the analysis that yielded a significant finding, thus introducing a bias in the reported results.
 
-**P-hacking**, also known as data dredging or fishing, involves manipulating data or analysis procedures to obtain statistically significant results. It refers to the selective reporting or analysis of data in order to achieve desired outcomes or significant p-values. This practice is highly problematic because it can introduce bias, mislead interpretations, and undermine the credibility of research findings.
+Both multiple comparisons and p-hacking can have severe consequences. They can lead to spurious or false-positive findings, misinterpretations, and misguided decision-making. Moreover, they erode the trust in scientific research and can have far-reaching implications in fields such as medicine, economics, and social sciences.
 
-Example: Suppose a social scientist is examining the relationship between social media usage and self-esteem. Initially, the researcher measures self-esteem in various ways and tests multiple statistical models. After several unsuccessful attempts to find a significant relationship, they finally discover a small but statistically significant correlation between self-esteem and the number of followers on a specific social media platform. However, this result was obtained after trying various combinations and selectively reporting the analysis that yielded a significant finding, thus introducing a bias in the reported results.
+  
+  **Mitigating the Pitfalls**
 
-Both multiple comparison and p-hacking can have severe consequences. They can lead to spurious or false-positive findings, misinterpretations, and misguided decision-making. Moreover, they erode the trust in scientific research and can have far-reaching implications in fields such as medicine, economics, and social sciences.
-
-
-**Mitigating the Pitfalls**
-
-To mitigate the perils of multiple comparison and p-hacking, it is important to adopt responsible and rigorous practices in data analysis. Here are some key recommendations:
+  To mitigate the perils of multiple comparisons and p-hacking, it is important to adopt responsible and rigorous practices in data analysis. Here are some key recommendations:
 
 * *Pre-registration*: Clearly define hypotheses and analysis plans in advance, reducing the temptation to selectively report findings post-analysis.
 
@@ -96,10 +103,12 @@ To mitigate the perils of multiple comparison and p-hacking, it is important to 
 
 * *Independent Validation*: Encourage independent replication of findings to validate and reinforce the robustness of research outcomes.
 
-Multiple comparison and p-hacking pose significant challenges to the integrity and credibility of data analysis. Researchers, analysts, and decision-makers must be aware of these pitfalls and adopt responsible practices to ensure rigorous and reliable results. By adhering to proper statistical methods, transparency, and robust scientific practices, we can enhance the validity of research findings, foster trust in data-driven decisions, and advance our understanding of the world around us.
-
+Multiple comparisons and p-hacking pose significant challenges to the integrity and credibility of data analysis. Researchers, analysts, and decision-makers must be aware of these pitfalls and adopt responsible practices to ensure rigorous and reliable results. By adhering to proper statistical methods, transparency, and robust scientific practices, we can enhance the validity of research findings, foster trust in data-driven decisions, and advance our understanding of the world around us.
 
 &nbsp;
+_________________
+&nbsp;
+
 #### **Simpson's Paradox**
 Simpson's Paradox is a statistical phenomenon where the relationship between two variables reverses or changes direction when a third variable is taken into account. It can lead to misleading or contradictory conclusions if the underlying confounding factor is not properly considered. Here are a few real-life examples to illustrate the concept:
 
@@ -107,21 +116,30 @@ Simpson's Paradox is a statistical phenomenon where the relationship between two
 
 1. Example 2: Medical Treatment In a medical study comparing the effectiveness of two treatments, Treatment A and Treatment B, it is found that Treatment A has a higher success rate when analyzed separately for younger and older patients. However, when combining the data for all age groups, it is observed that Treatment B has a higher success rate overall. This paradox can arise if the distribution of age groups is not taken into account. For example, if Treatment A is more commonly administered to younger patients who generally have better outcomes, while Treatment B is used for older patients with more severe cases, the overall analysis may lead to a different conclusion.
 
-1. Example 3: Sports Performance In sports, an athlete's performance can be evaluated based on various factors, such as individual game statistics or overall season performance. Consider a baseball player who has a higher batting average in each game against left-handed pitchers and right-handed pitchers separately. However, when looking at the combined data, it is found that the player has a lower overall batting average. This paradox can occur if the player faces left-handed pitchers more frequently in games where the overall team's performance is weaker, while facing right-handed pitchers more often in games where the team performs better. The team's performance acts as a confounding factor, leading to the reversal of the relationship.
+1. Example 3: Sports Performance In sports, an athlete's performance can be evaluated based on various factors, such as individual game statistics or overall season performance. Consider a baseball player who has a higher batting average in each game against left-handed pitchers and right-handed pitchers separately. However, when looking at the combined data, it is found that the player has a lower overall batting average. This paradox can occur if the player faces left-handed pitchers more frequently in games where the overall team's performance is weaker while facing right-handed pitchers more often in games where the team performs better. The team's performance acts as a confounding factor, leading to the reversal of the relationship.
 
 These examples demonstrate how Simpson's Paradox can occur in real-life situations, where the interpretation of data can be misleading if the presence of confounding factors is not considered. It highlights the importance of thorough analysis and understanding the underlying factors to draw accurate conclusions from data.
 
+&nbsp;
+_________________
+&nbsp;
 
 
 &nbsp;&nbsp;
 ## Linear Algebra
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;
 ## Multivariate Calculus
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;&nbsp;
 # Machine Learning
@@ -145,8 +163,10 @@ The **deployment** stage refers to integrating a model or solution into a produc
 
 For example, suppose a model is trained on data collected from a specific region to predict the likelihood of loan defaults. In that case, it may not perform as well when deployed in a different region due to variations in demographics and economic conditions. Also, suppose the model is used to make loan approval decisions, and it's found to be biased against a particular race or gender. In that case, it's important to evaluate the potential impact of the model before deploying it in a production environment. The model's behavior needs to be made comprehensible to stakeholders, and the ethical implications of its deployment should be carefully considered.
 
-
 &nbsp;
+_________________
+&nbsp;
+
 #### **Cross Industry Standard Process for Data Mining (CRISP-DM)** - Detailed version
 ![This is the Cross Industry Standard Process for Data Mining diagram.](/assets/images/CRISP-DM.png "This is the Cross Industry Standard Process for Data Mining diagram.")
 
@@ -188,16 +208,19 @@ Deployment refers to the process of integrating a model or solution into a produ
 
 One important consideration in deploying a model is that the environment it will operate in may be different from the environment it was developed in. This can lead to discrepancies in performance, and the need for recalibration or adjustment of the model. For example, a model trained on data collected from a specific region may not perform as well when deployed in a different region. Another important aspect of deployment is ongoing monitoring and maintenance. Models can suffer from "drift" as data patterns change over time, and periodic recalibration or retraining may be necessary to ensure continued accuracy.
 
-Finally, it is important to consider the ethical implications of deploying a model or solution. Data-driven decision making can have unintended consequences, and it is important to carefully evaluate the potential impact of a model before deploying it in a production environment.
-
+Finally, it is important to consider the ethical implications of deploying a model or solution. Data-driven decision-making can have unintended consequences, and it is important to carefully evaluate the potential impact of a model before deploying it in a production environment.
 
 &nbsp;
+_________________
+&nbsp;
+
 #### **Signal and Noise**
 Signal refers to the true underlying pattern or information in the data that we are interested in, while noise represents random variations or irrelevant factors that can obscure the signal. For instance, in analyzing stock market data, the signal may be the long-term trend indicating the overall performance, while the noise could be short-term fluctuations caused by random market events.
 
-
-
 &nbsp;
+_________________
+&nbsp;
+
 #### **Overfitting**
 Overfitting is a phenomenon in machine learning and statistical modeling where a model becomes overly complex and excessively tailored to the training data, resulting in poor generalization to new, unseen data. It occurs when a model captures noise or random fluctuations in the training data, instead of learning the underlying true patterns.
 
@@ -220,8 +243,10 @@ To mitigate overfitting, various techniques can be employed, such as:
 1. *Simplifying the model*: Using simpler models with fewer parameters or reducing the complexity of the model architecture can reduce the risk of overfitting.
 By employing these techniques, the aim is to find the right balance between model complexity and generalization, ensuring that the model performs well not only on the training data but also on unseen data.
 
-
 &nbsp;
+_________________
+&nbsp;
+
 #### **Underfitting**
 Underfitting is the opposite of overfitting and occurs when a machine learning model or statistical model is too simple to capture the underlying patterns in the data. It arises when the model is unable to learn the complexities and nuances present in the data, resulting in poor performance on both the training data and new, unseen data.
 
@@ -245,16 +270,17 @@ To mitigate underfitting, several approaches can be employed:
 
 The goal in mitigating underfitting is to find an appropriate level of model complexity that balances simplicity with the ability to capture the relevant patterns in the data, ultimately leading to better generalization performance.Underfitting is the opposite of overfitting and occurs when a machine learning model or statistical model is too simple to capture the underlying patterns in the data. It arises when the model is unable to learn the complexities and nuances present in the data, resulting in poor performance on both the training data and new, unseen data.
 
-
-
 &nbsp;
+_________________
+&nbsp;
+
 #### **Bias-Variance Tradeoff**
 The bias-variance tradeoff is a fundamental concept in machine learning that helps us understand the relationship between the complexity of a model and its ability to generalize well to unseen data. Let's break it down with a simple example.
 
 Imagine we're training a model to predict house prices based on their size (in square meter). We have a dataset of houses with their corresponding sizes and prices. Now, we want to build a regression model to predict the price of a new house given its size.
 
 * **High Bias, Low Variance**
-If we use a simple model, such as a linear regression with only one feature (size), it may not capture the complexity of the underlying relationship accurately. This is called high bias. The model assumes a linear relationship between size and price, which may not hold true in real-world scenarios. The model's predictions might be consistently off the mark, showing high error on both the training and test data. This is an example of high bias and low variance.
+If we use a simple model, such as a linear regression with only one feature (size), it may not capture the complexity of the underlying relationship accurately. This is called high bias. The model assumes a linear relationship between size and price, which may not hold true in real-world scenarios. The model's predictions might be consistently off the mark, showing high errors on both the training and test data. This is an example of high bias and low variance.
 
 * **Low Bias, High Variance**
 On the other hand, if we use a more complex model, like a high-degree polynomial regression, it can fit the training data very well. The model can flexibly capture any pattern, even if it's noisy or random, resulting in low bias. However, when we evaluate the model on the test data, it may perform poorly. This is because the model has overfit the training data, learning the noise and idiosyncrasies of the training set. The model is too sensitive to small changes in the data, leading to high variance. This means the model may not generalize well to new, unseen houses.
@@ -270,8 +296,10 @@ In practice, this tradeoff is managed through techniques like regularization, fe
 
 By understanding and balancing the bias-variance tradeoff, we can develop models that generalize well, avoiding underfitting (high bias) and overfitting (high variance).
 
+&nbsp;
+_________________
+&nbsp;
 
-&nbsp;&nbsp;
 ## Supervised Learning
 #### **A Comprehensive Template For Classification Problem**
 1. **Data Preprocessing**
@@ -297,7 +325,7 @@ By understanding and balancing the bias-variance tradeoff, we can develop models
 
 4. **Feature Engineering**
 * Create new features that may be more informative or relevant. 
-* Transform existing features to make them more suitable for modelling. 
+* Transform existing features to make them more suitable for modeling. 
 * Use techniques such as one-hot encoding, binning, or scaling.
 * Consider using domain expertise to create features that may be more relevant and meaningful. For example, in the medical domain, it may be useful to create features that capture patient demographics, medical history, and lifestyle factors. 
 
@@ -347,11 +375,13 @@ By understanding and balancing the bias-variance tradeoff, we can develop models
 * Consider setting up alerts or triggers to notify stakeholders if the model's performance starts to degrade.
 
 15. **Maintenance**
-* As new data becomes available or as the environment changes, it may be necessary to update the model to ensure it continues to provide accurate predictions. Maintenance involves updating the model's training data, retraining the model, and updating its hyperparameters as needed. It is important to regularly evaluate the model's performance and make adjustments to ensure it remains accurate and relevant over time.
+* As new data become available or as the environment changes, it may be necessary to update the model to ensure it continues to provide accurate predictions. Maintenance involves updating the model's training data, retraining the model, and updating its hyperparameters as needed. It is important to regularly evaluate the model's performance and make adjustments to ensure it remains accurate and relevant over time.
 * Consider using automated pipelines to handle data updates and model retraining, which can save time and improve efficiency.
-
-
+  
 &nbsp;
+_________________
+&nbsp;
+
 #### **A Comprehensive Template For Regression Problem**
 1. **Data Preprocessing**
 * Remove any duplicate records.
@@ -432,43 +462,67 @@ By understanding and balancing the bias-variance tradeoff, we can develop models
 * Consider the ongoing costs and benefits of maintaining the model compared to redeveloping it from scratch.
 * Ensure that the model is still aligned with the business objectives and that the assumptions made during the development process are still valid.
 * Document any changes or updates to the model and its associated processes and workflows.
+  
+&nbsp;
+_________________
+&nbsp;
 
-
-&nbsp;&nbsp;
 ## Unsupervised Learning
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;
 ## Data Visualization
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;
 ## Story Telling With Data
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;
 ## Machine Learning For Production
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;&nbsp;
 # Deep Learning
 ## Neural Networks
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
+
 
 &nbsp;&nbsp;
 ## Convolutional Neural Networks
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 &nbsp;&nbsp;
 ## Keras and TensorFlow
 Placeholder
 
+&nbsp;
+_________________
+&nbsp;
 
 
 &nbsp;&nbsp;&nbsp;
@@ -478,12 +532,24 @@ Placeholder
 https://github.com/yenh-cs/adventofcode2021.git
 
 &nbsp;
+_________________
+&nbsp;
+
+&nbsp;
 #### Advent Of Code 2022
 https://github.com/yenh-cs/adventofcode2022.git
 
 &nbsp;
+_________________
+&nbsp;
+
+&nbsp;
 #### Leetcode
 https://github.com/yenh-cs/algorithm.git 
+
+&nbsp;
+_________________
+&nbsp;
 
 
 &nbsp;&nbsp;
